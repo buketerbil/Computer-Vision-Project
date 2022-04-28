@@ -24,4 +24,14 @@ pip install opencv-python
 - According to the new image size arrangements, 'rock, paper, or scissors' is predicted by using the data from the model, using the .predict() function. 
 
 ## Milestone 3
--
+- For the bot player to randomly choose between rock, paper and scissors, I first imported random. Then, created a list of these choices. 
+- To define which class is dominant to the other, I first created a dictionary consisting of the beating element as keys and the losing elements as values. Check the following:
+```python
+beats = {
+    'rock': 'paper',
+    'paper': 'scissors',
+    'scissors': 'rock'
+}
+```
+- To figure out who wins (the user vs the bot), I firstly created a function called choose_winner(player_choice, bot_choice). If the bot choice is the same as the player's choice, this function returns 'TIE'. If one of the values (losing elements) from the dictionary corresponds to the bot's choice, then this function returns 'You lost'. If one of the values from the dictionary corresponds to the player's choice, the it returns 'You won'.
+
